@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>HTML Forms</title>
+</head>
+<body id="page">
+<h1> Selamat Datang </h1>
+<button style="color:purple;
+background-color:bisque;" onclick="mula()">Start Now</button><br><br>
+<button style="color:purple; background-color:bisque;" onclick="DarkMode()">Dark</button>
+<button style="color:purple; background-color:bisque;" onclick="LightMode()">Light</button><br><br>
+
+<button style="color:purple; background-color:bisque;" onclick="increaseText()">Large Text</button>
+<button style="color:purple; background-color:bisque;" onclick="decreaseText()">Small Text</button><br><br>
+
+<form onsubmit="hantar(); return false;">
+	<label for="name">First Name</label><br> 
+	<input type= "text" id="name"><br>
+	<label for="name">Last Name</label><br>
+	<input type= "text" id="name"><br>
+	<label for="email">Email</label><br>
+	<input type="text" id="email"><br>
+	<label for="phone">Number Phone</label><br> 
+	<input type="text" id="phone"><br>
+	<label>Password</label><br> 
+	<input type= "password"><br>
+	<label>Gender</label> 
+	<input type= "radio" value= "Male">Male
+	<input type= "radio" value= "Female">Female <br>
+	
+	<label>Interest</label><br>
+	<input type= "checkbox" value= "Option1"> Interest 1<br>
+	<input type= "checkbox" value= "Option2"> Interest 2<br>
+	
+	<label>Describe yourself</label><br> 
+	<textarea name="message" rows="10" cols="30">I love sleeping.
+	</textarea><br><br>
+	<input type="sumbit">
+	<button type="submit">Submit</button>
+	<input type="reset">
+
+</form>
+
+<hr>
+<h2>Submitted Info</h2>
+<p id="result"></p>
+
+<script>
+	alert("WELCOME TO MY WEBSITE")
+function mula(){
+	alert("Start filling the form");
+	}
+function hantar(){
+	var name=document.getElementById("name").value;
+	var phone=document.getElementById("phone").value;
+	var email=document.getElementById("email").value;
+	
+	alert ("ARIGATOO "+name + "We will contact you on "+phone);
+	
+	document.getElementById("result").innerHTML=
+	"ARIGATOO "+name + "We will contact you on "+email;
+	}
+function DarkMode(){
+	document.getElementById("page").style.backgroundColor="Brown";
+	document.getElementById("page").style.color="bisque";
+	}
+function LightMode(){
+	document.getElementById("page").style.backgroundColor="Bisque";
+	document.getElementById("page").style.color="Brown";
+	}
+	
+function increaseText() {
+	document.getElementById("page").
+	style.fontSize="26px";}
+	
+function decreaseText() {
+	document.getElementById("page").
+	style.fontSize="10px";}
+	
+
+</script>
+</body>
+</html>
