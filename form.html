@@ -12,7 +12,7 @@ background-color:bisque;" onclick="mula()">Start Now</button><br><br>
 <button style="color:purple; background-color:bisque;" onclick="increaseText()">Large Text</button>
 <button style="color:purple; background-color:bisque;" onclick="decreaseText()">Small Text</button><br><br>
 
-<form onsubmit="hantar(); return false;">
+<form id="borang" onsubmit="hantar(); return false;">
 	<label for="name">First Name</label><br> 
 	<input type= "text" id="name"><br>
 	<label for="name">Last Name</label><br>
@@ -58,6 +58,8 @@ function hantar(){
 	
 	document.getElementById("result").innerHTML=
 	"ARIGATOO "+name + "We will contact you on "+email;
+	
+	document.getElementById("borang"). style.display="none";
 	}
 function DarkMode(){
 	document.getElementById("page").style.backgroundColor="Brown";
